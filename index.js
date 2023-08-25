@@ -30,5 +30,5 @@ var listener = app.listen(process.env.PORT || 3000, function () {
 });
 
 app.get('/api/whoami', function (req, res) {
-  res.json({ ipaddress: req.ip ,'language':req.headers,software:req.headers['user-agent']});
+  res.json({ ipaddress: req.ip ,'language':req.headers['accept-language'],software:req.headers['user-agent']});
 });
